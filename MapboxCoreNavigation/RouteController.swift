@@ -361,7 +361,7 @@ open class RouteController: NSObject {
             return false
         }
         
-        guard location.timestamp.timeIntervalSince(lastLocation.location.timestamp) < lastLocation.durationDelta * 3 else {
+        guard location.timestamp.timeIntervalSince(lastLocation.location.timestamp) <= lastLocation.durationDelta * 3 else {
             return false
         }
         
